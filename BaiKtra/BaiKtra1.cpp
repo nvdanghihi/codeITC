@@ -103,7 +103,22 @@ class MayBay : public PTGT
 };
 int main()
 {
-	int n;
+	cout<<"\n\t\t\t\tMenu:";
+	cout<<"\n1.Nhap/Xuat thong tin phuong tien gt:";
+	cout<<"\n1.Nhap/Xuat thong tin may bay:";
+	cout<<"\n3.Tai dinh nghia toan tu nhap.";
+	cout<<"\n4.Ham tinh gia thanh sau thue.";
+	cout<<"\n5.Tai dinh nghia toan tu <.";
+	cout<<"\n6.So sanh so nguyen x voi so ghe.";
+	cout<<"\n7.Tai dinh nghia toan tu xuat.";
+	cout<<endl;
+	int lc;
+	cout<<"\nMoi ban chon:";cin>>lc;
+	switch(lc)
+	{
+		case 1:
+		{
+		int n;
 	cout<<"\nNhap so phuong tien giao thong:";cin>>n;
 	PTGT a[n];
 	for(int i=0;i<n;i++)
@@ -116,6 +131,10 @@ int main()
 		cout<<"\nXuat thong tin phuong tien "<<i+1<<" :";
 		a[i].xuat();
 	}
+		}
+			break;
+	case 2:
+	{
 	int m;
 	cout<<"\nNhap so may bay:";
 	cin>>m;
@@ -130,19 +149,51 @@ int main()
 		cout<<"\nXuat thong tin may bay "<<i+1<<" :";
 		b[i].xuatTT();
 	}
-	cout<<"\nNhap lai thong tin bang toan tu nhap >>.";
+	}
+			break;
+		case 3:
+		{
+	int m;
+	cout<<"\nNhap so may bay:";
+	cin>>m;
+	MayBay b[m];
+		cout<<"\nNhap lai thong tin bang toan tu nhap >>.";
 	for(int i=0;i<m;i++)
 	{
 		cout<<"\nMay bay "<<i+1<<" :";
 		cin>>b[i];
 	}
-	cout<<"\nXuat thong tin bang toan tu xuat <<.";
+		}
+	break;
+		
+		case 4:
+		{
+			int m;
+			MayBay b[m];
+				for(int i=0;i<m;i++)
+	{
+		cout<<"\nXuat thong tin may bay "<<i+1<<" :";
+		b[i].xuatTT();
+	}
+		}
+			break;
+		case 5:
+		{
+			
+			int m;
+			MayBay b[m];
+			cout<<"\nNhap lai thong tin bang toan tu nhap >>.";
 	for(int i=0;i<m;i++)
 	{
 		cout<<"\nMay bay "<<i+1<<" :";
-		cout<<b[i];
+		cin>>b[i];
 	}
-	int x;
+		}
+		case 6:
+		{
+			int m;
+			MayBay b[m];
+			int x;
 	do{
 	cout<<"\nNhap so nguyen x:"; cin>>x;
 	}while(x<0);
@@ -158,6 +209,19 @@ int main()
 				cout<<"\nMay bay co so ghe > x!!!";
 			}
 		
+	}
+		}
+	case 7:
+	{
+		int m;
+			MayBay b[m];
+		cout<<"\nXuat thong tin bang toan tu xuat <<.";
+	for(int i=0;i<m;i++)
+	{
+		cout<<"\nMay bay "<<i+1<<" :";
+		cout<<b[i];
+	}
+	}break;
 	}
 	return 0;
 }
