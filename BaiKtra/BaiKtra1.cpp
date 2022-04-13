@@ -103,7 +103,7 @@ class MayBay : public PTGT
 };
 int main()
 {
-	cout<<"\n\t\t\t\tMenu:";
+	Ttuc: cout<<"\n\t\t\t\tMenu:";
 	cout<<"\n1.Nhap/Xuat thong tin phuong tien gt:";
 	cout<<"\n1.Nhap/Xuat thong tin may bay:";
 	cout<<"\n3.Tai dinh nghia toan tu nhap.";
@@ -223,5 +223,9 @@ int main()
 	}
 	}break;
 	}
+	char tl;
+	cout<<"\nBan co muon tiep tuc hay khong?chon Y/N.";
+	cin>>tl;
+	if (tl=='y'|| tl=='Y') goto Ttuc;
 	return 0;
 }
