@@ -99,10 +99,13 @@ int main()
 		}
 	}
 	int x;
-	cout<<"\nMoi ban nhap so bao danh cua thi sinh can tim;"; cin>>x;
+	cout<<"\nMoi ban nhap so bao danh cua thi sinh can tim:"; cin>>x;
 	for(int i=0;i<m;i++)
 	{
-		if (a[i].getSBD()==x);
+		if (x==b[i].getSBD());
+		{
+			b[i].xuat();
+		}
 	}
 	return 0;
 }

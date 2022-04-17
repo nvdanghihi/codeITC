@@ -18,6 +18,10 @@ class AnPham
 			cout<<"\nTen:"<<ten
 				<<"\nGia:"<<giathanh<<endl;
 		}
+		char getT()
+		{
+			//return ten;
+		}
 };
 class Sach : public AnPham
 {
@@ -54,10 +58,6 @@ class DiaCD : public AnPham
 		{
 			AnPham::xuat();
 			cout<<"\nSo phut:"<<sophut;
-		}
-		int getT()
-		{
-			return ten;
 		}
 };
 int main()
@@ -109,7 +109,10 @@ int main()
 		cout<<"\nNhap ten dia CD can tim:";
 		for(int i=0;i<k;i++)
 		{
-			if(x==c[i].ten)
+			if(x==c[i].getT())
+			{
+				c[i].xuat();
+			}
 		}
 	return 0;
 }
